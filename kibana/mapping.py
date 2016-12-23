@@ -154,6 +154,7 @@ class KibanaMapping():
         mapping_dict = {}
         mapping_dict['customFormats'] = "{}"
         mapping_dict['title'] = self.index_pattern
+        mapping_dict['timeFieldName'] = '@timestamp'
         # now post the data into .kibana
         mapping_dict['fields'] = json.dumps(field_cache, separators=(',', ':'))
         # in order to post, we need to create the post string
